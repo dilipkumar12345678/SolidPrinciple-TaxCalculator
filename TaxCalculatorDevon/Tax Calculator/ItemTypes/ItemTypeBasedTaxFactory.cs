@@ -24,7 +24,7 @@ namespace TaxCalculatorDevon.Tax_Calculator.ItemTypes
             }
             catch (Exception ex)
             {
-
+                //
             }
             return tax;
         }
