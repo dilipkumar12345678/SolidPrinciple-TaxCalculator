@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="display results\DisplayResults.cs" />
+    <Compile Include="Input\CreateProduct.cs" />
     <Compile Include="orders\CalculateTaxForBulkOrders.cs" />
     <Compile Include="orders\ItemType.cs" />
     <Compile Include="orders\Order.cs" />
@@ -59,11 +61,12 @@
     <Compile Include="Tax Calculator\ItemTypes\LocalItemTax.cs" />
     <Compile Include="Tax Calculator\ItemTypes\MedicineItemImportedTax.cs" />
     <Compile Include="Tax Calculator\ItemTypes\MedicineItemLocalTax.cs" />
-    <Compile Include="TaxConstants.cs" />
+    <Compile Include="TaxConstants\TaxConstants.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
