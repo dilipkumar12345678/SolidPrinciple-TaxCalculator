@@ -22,6 +22,7 @@ namespace TaxCalculatorDevon
 
         static void Main(string[] args)
         {
+            //testing
             decimal[] result = null;
 
             CreateProduct.Add_ProductDescription(ref book, ref cap, ref sandwich, ref imported_book, ref imported_cap, ref imported_sandwich, ref tee_shirt);
