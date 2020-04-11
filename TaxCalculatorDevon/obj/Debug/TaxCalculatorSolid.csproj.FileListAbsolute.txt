@@ -1,6 +1,6 @@
 C:\Users\91997\Documents\gang of devlopers\TaxCalculatorDevon\bin\Debug\TaxCalculatorDevon.exe.config
 C:\Users\91997\Documents\gang of devlopers\TaxCalculatorDevon\bin\Debug\TaxCalculatorDevon.exe
 C:\Users\91997\Documents\gang of devlopers\TaxCalculatorDevon\bin\Debug\TaxCalculatorDevon.pdb
-C:\Users\91997\Documents\gang of devlopers\TaxCalculatorDevon\obj\Debug\TaxCalculatorSolid.csprojResolveAssemblyReference.cache
 C:\Users\91997\Documents\gang of devlopers\TaxCalculatorDevon\obj\Debug\TaxCalculatorDevon.exe
 C:\Users\91997\Documents\gang of devlopers\TaxCalculatorDevon\obj\Debug\TaxCalculatorDevon.pdb
+C:\Users\91997\Documents\gang of devlopers\TaxCalculatorDevon\obj\Debug\TaxCalculatorSolid.csprojResolveAssemblyReference.cache
