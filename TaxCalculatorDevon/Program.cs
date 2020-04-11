@@ -19,29 +19,41 @@ namespace TaxCalculatorDevon
         public static ProductDescription imported_sandwich;
         public static ProductDescription tee_shirt;
 
+
         static void Main(string[] args)
         {
+            decimal[] result = null;
 
             CreateProduct.Add_ProductDescription(ref book, ref cap, ref sandwich, ref imported_book, ref imported_cap, ref imported_sandwich, ref tee_shirt);
 
-            TotalTax_TotalPrice(book, cap, sandwich);
+            #region Input 1
+
+            result = TotalTax_TotalPrice(book, cap, sandwich);
+
+            DisplayResults.displayTaxeResults(result,book, cap, sandwich);
+
+            #endregion
 
             Console.ReadLine();
 
-            TotalTax_TotalPrice(imported_book, imported_cap, imported_sandwich, tee_shirt);
+            #region Input 2
+
+            result = TotalTax_TotalPrice(imported_book, imported_cap, imported_sandwich, tee_shirt);
+
+            DisplayResults.displayTaxeResults(result, imported_book, imported_cap, imported_sandwich, tee_shirt);
+            #endregion
 
             Console.ReadLine();
         }
 
 
-        public static void TotalTax_TotalPrice(params ProductDescription[] products)
+        public static decimal[] TotalTax_TotalPrice(params ProductDescription[] products)
         {
             CalculateTaxForBulkOrders blko = new CalculateTaxForBulkOrders(products);
-            decimal[] result = blko.CalculateTax();
-
-            DisplayResults.displayTaxeResults(products, result);
+            return blko.CalculateTax();
+            
         }
 
-       
+
     }
 }

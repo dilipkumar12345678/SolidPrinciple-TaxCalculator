@@ -9,7 +9,7 @@ namespace TaxCalculatorDevon.display_results
 {
     public class DisplayResults
     {
-        public static void displayTaxeResults(ProductDescription[] products, decimal[] result)
+        public static void displayTaxeResults(decimal[] result,params ProductDescription[] products)
         {
             Console.WriteLine("ItemName" + "\t\t" + "Quantity" + "\t\t" + "Price" + "\t\t" + "PriceAfterTax");
             foreach (var item in products)
