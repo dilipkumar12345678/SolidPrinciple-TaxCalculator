@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TaxCalculatorDevon
+namespace TaxCalculatorEngine.TaxConstants
 {
     public class TaxConstants
     {

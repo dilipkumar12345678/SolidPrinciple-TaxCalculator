@@ -3,17 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TaxCalculatorDevon.Tax_Calculator.Base;
-using TaxCalculatorDevon.Tax_Calculator.ItemTypes;
+
+using TaxCalculatorEngine.Product_Description;
+using TaxCalculatorEngine.Tax_Calculator.Base;
+using TaxCalculatorEngine.Tax_Calculator.ItemTypes;
+using TaxCalculatorEngine.Tax_Calculator.RoundOff;
 
 namespace TaxCalculatorDevon.orders
 {
     public class Order
     {
-        public ProductDescription productdesc;
+        public TaxCalculatorEngine.Product_Description.ProductDescription productdesc;
         ITaxFactory _taxfactory;
-
-        public Order(ProductDescription product) : this(new ItemTypeBasedTaxFactory(product))
+        
+        public Order(TaxCalculatorEngine.Product_Description.ProductDescription product) : this(new ItemTypeBasedTaxFactory(product))
         {
             this.productdesc = product;
         }
@@ -25,7 +28,7 @@ namespace TaxCalculatorDevon.orders
         
         public decimal calculate_PriceAfterTax()
         {
-            Tax tax = _taxfactory.GetTaxObject();
+            ITax tax = _taxfactory.GetTaxObject();
             decimal actual_tax = tax.Calulate_Tax(productdesc);
             decimal roundedoff = RoundOff.RoundOffdecimal(actual_tax);
 
