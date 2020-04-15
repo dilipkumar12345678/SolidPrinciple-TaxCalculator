@@ -1,0 +1,5 @@
+C:\Users\91997\Documents\gang of devlopers\TaxCalculatorEngine\obj\Debug\TaxCalculatorEngine.csprojResolveAssemblyReference.cache
+C:\Users\91997\Documents\gang of devlopers\TaxCalculatorEngine\bin\Debug\TaxCalculatorEngine.dll
+C:\Users\91997\Documents\gang of devlopers\TaxCalculatorEngine\bin\Debug\TaxCalculatorEngine.pdb
+C:\Users\91997\Documents\gang of devlopers\TaxCalculatorEngine\obj\Debug\TaxCalculatorEngine.dll
+C:\Users\91997\Documents\gang of devlopers\TaxCalculatorEngine\obj\Debug\TaxCalculatorEngine.pdb
