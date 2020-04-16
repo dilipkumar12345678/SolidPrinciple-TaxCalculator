@@ -50,8 +50,15 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Tax Calculator\ItemTypes\FoodItemImportedTaxTests.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TaxCalculatorEngine\TaxCalculatorEngine.csproj">
+      <Project>{A50B5F38-20C2-4350-938B-1AD12BB071C6}</Project>
+      <Name>TaxCalculatorEngine</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

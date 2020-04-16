@@ -14,6 +14,9 @@ namespace TaxCalculatorEngine.Tax_Calculator.ItemTypes
     {
         public decimal Calulate_Tax(ProductDescription productDescription)
         {
+            if (productDescription.Quantity == 0)
+                throw new InvalidOperationException();
+
             return ((TaxCalculatorEngine.TaxConstants.TaxConstants.FoodImportedTaxPercentage * (productDescription.Price) / 100) +
                 productDescription.Price) * productDescription.Quantity;
         }
