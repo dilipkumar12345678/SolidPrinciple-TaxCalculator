@@ -21,6 +21,8 @@ namespace TaxCalculatorEngine.Tax_Calculator.ItemTypes.Tests
                 itemType = ItemType.FoodItemImportedTax,
             };
             foodImp = new FoodItemImportedTax();
+
+            
         }
         [Test]
         public void Calulate_TaxTest_withUnitQuantity()
@@ -42,12 +44,13 @@ namespace TaxCalculatorEngine.Tax_Calculator.ItemTypes.Tests
         public void Calulate_TaxTest_withZeroQuantity()
         {
             prd.Quantity = 0;
-           // var result = foodImp.Calulate_Tax(prd);
-            //Assert.AreEqual("Quantity should Greater than 0", result.ToString());
-            // Assert.AreEqual(typeof(Exception),typeof(res))
-             Assert.Throws<InvalidOperationException>(() => foodImp.Calulate_Tax(prd));
-            
-
+            Assert.Throws<Exception>(() => foodImp.Calulate_Tax(prd));
+        }
+        [Test]
+        public void Calulate_TaxTest_withLargeQuantity()
+        {
+            prd.Quantity = 0;
+            Assert.Throws<Exception>(() => foodImp.Calulate_Tax(prd));
         }
     }
 }

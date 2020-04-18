@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NLog.Internal;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,5 +15,6 @@ namespace TaxCalculatorEngine.TaxConstants
         public const decimal MedicineImportedTaxPercentage = 10;
         public const decimal FoodLocalTaxPercentage = 0;
         public const decimal MedicineLocalTaxPercentage = 0;
+        
     }
 }
