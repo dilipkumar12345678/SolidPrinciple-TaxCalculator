@@ -1,21 +1,17 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TaxCalculatorEngine.Tax_Calculator.ItemTypes;
+﻿using TaxCalculatorEngine.Tax_Calculator.ItemTypes;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TaxCalculatorEngine.Product_Description;
+using NUnit.Framework;
 
 namespace TaxCalculatorEngine.Tax_Calculator.ItemTypes.Tests
 {
-    [TestClass()]
+    [TestFixture]
     public class FoodItemImportedTaxTests
     {
         private ProductDescription prd;
         private FoodItemImportedTax foodImp;
-        [TestInitialize]
-        public void TestInit()
+        [SetUp]
+        public void Setup()
         {
             prd = new ProductDescription()
             {
@@ -26,15 +22,15 @@ namespace TaxCalculatorEngine.Tax_Calculator.ItemTypes.Tests
             };
             foodImp = new FoodItemImportedTax();
         }
-        [TestMethod()]
+        [Test]
         public void Calulate_TaxTest_withUnitQuantity()
         {
 
             var result = foodImp.Calulate_Tax(prd);
-            Assert.AreEqual("18.7", result.ToString());
+            NUnit.Framework.Assert.AreEqual("18.7", result.ToString());
 
         }
-        [TestMethod()]
+        [Test]
         public void Calulate_TaxTest_withMoreThanOneQuantity()
         {
             prd.Quantity = 3;
@@ -42,13 +38,15 @@ namespace TaxCalculatorEngine.Tax_Calculator.ItemTypes.Tests
             Assert.AreEqual("56.1", result.ToString());
 
         }
-        [TestMethod()]
+        [Test]
         public void Calulate_TaxTest_withZeroQuantity()
         {
             prd.Quantity = 0;
-            var result = foodImp.Calulate_Tax(prd);
+           // var result = foodImp.Calulate_Tax(prd);
             //Assert.AreEqual("Quantity should Greater than 0", result.ToString());
-           // Assert.AreEqual(typeof(Exception),typeof(res))
+            // Assert.AreEqual(typeof(Exception),typeof(res))
+             Assert.Throws<InvalidOperationException>(() => foodImp.Calulate_Tax(prd));
+            
 
         }
     }
