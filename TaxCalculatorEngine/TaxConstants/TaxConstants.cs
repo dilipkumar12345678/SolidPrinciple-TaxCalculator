@@ -9,12 +9,12 @@ namespace TaxCalculatorEngine.TaxConstants
 {
     public class TaxConstants
     {
-        public const decimal LocalItemTaxPercentage = 7;
-        public const decimal ImportedItemTaxPercentage = 17;
-        public const decimal FoodImportedTaxPercentage = 10;
-        public const decimal MedicineImportedTaxPercentage = 10;
-        public const decimal FoodLocalTaxPercentage = 0;
-        public const decimal MedicineLocalTaxPercentage = 0;
+        public static decimal LocalItemTaxPercentage;
+        public static decimal ImportedItemTaxPercentage;
+        public static decimal FoodImportedTaxPercentage;
+        public static decimal MedicineImportedTaxPercentage;
+        public static decimal FoodLocalTaxPercentage;
+        public static decimal MedicineLocalTaxPercentage;
         
     }
 }

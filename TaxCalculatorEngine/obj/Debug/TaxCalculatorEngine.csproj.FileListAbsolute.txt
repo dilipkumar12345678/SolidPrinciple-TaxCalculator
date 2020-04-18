@@ -4,3 +4,6 @@ C:\Users\91997\Documents\gang of devlopers\TaxCalculatorEngine\obj\Debug\TaxCalc
 C:\Users\91997\Documents\gang of devlopers\TaxCalculatorEngine\obj\Debug\TaxCalculatorEngine.pdb
 C:\Users\91997\Documents\gang of devlopers\TaxCalculatorEngine\obj\Debug\TaxCalculatorEngine.csprojAssemblyReference.cache
 C:\Users\91997\Documents\gang of devlopers\TaxCalculatorEngine\obj\Debug\TaxCalculatorEngine.csproj.CoreCompileInputs.cache
+C:\Users\91997\Documents\gang of devlopers\TaxCalculatorEngine\bin\Debug\NLog.dll
+C:\Users\91997\Documents\gang of devlopers\TaxCalculatorEngine\bin\Debug\NLog.xml
+C:\Users\91997\Documents\gang of devlopers\TaxCalculatorEngine\obj\Debug\TaxCalculatorEngine.csproj.CopyComplete
