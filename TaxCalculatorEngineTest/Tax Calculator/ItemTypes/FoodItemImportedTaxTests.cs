@@ -22,35 +22,47 @@ namespace TaxCalculatorEngine.Tax_Calculator.ItemTypes.Tests
             };
             foodImp = new FoodItemImportedTax();
 
+
+        }
+        [Test]
+        public void Calulate_TaxTest_withUnitTax()
+        {
+            TaxConstants.TaxConstants.FoodImportedTaxPercentage = 1;
+
+            var result = foodImp.Calulate_Tax(prd);
             
+            NUnit.Framework.Assert.AreEqual("17.17", result.ToString());
+
         }
         [Test]
-        public void Calulate_TaxTest_withUnitQuantity()
+        public void Calulate_TaxTest_withTenPercentTax()
         {
+            TaxConstants.TaxConstants.FoodImportedTaxPercentage = 10;
 
             var result = foodImp.Calulate_Tax(prd);
-            NUnit.Framework.Assert.AreEqual("18.7", result.ToString());
+            
+            Assert.AreEqual("18.7", result.ToString());
 
         }
+
+        
         [Test]
-        public void Calulate_TaxTest_withMoreThanOneQuantity()
+        public void Calulate_TaxTest_withZeroPercentTax()
         {
-            prd.Quantity = 3;
+            TaxConstants.TaxConstants.FoodImportedTaxPercentage = 0;
+
             var result = foodImp.Calulate_Tax(prd);
-            Assert.AreEqual("56.1", result.ToString());
 
-        }
-        [Test]
-        public void Calulate_TaxTest_withZeroQuantity()
-        {
-            prd.Quantity = 0;
-            Assert.Throws<Exception>(() => foodImp.Calulate_Tax(prd));
+            Assert.AreEqual("17", result.ToString());
         }
         [Test]
         public void Calulate_TaxTest_withLargeQuantity()
         {
-            prd.Quantity = 0;
-            Assert.Throws<Exception>(() => foodImp.Calulate_Tax(prd));
+            TaxConstants.TaxConstants.FoodImportedTaxPercentage = 100;
+
+            var result = foodImp.Calulate_Tax(prd);
+
+            Assert.AreEqual("34", result.ToString());
         }
     }
 }

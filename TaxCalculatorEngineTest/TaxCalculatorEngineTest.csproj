@@ -67,6 +67,11 @@
   <ItemGroup>
     <Compile Include="Tax Calculator\ItemTypes\FoodItemImportedTaxTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tax Calculator\ItemTypes\FoodItemLocalTaxTests.cs" />
+    <Compile Include="Tax Calculator\ItemTypes\ImportedItemTaxTests.cs" />
+    <Compile Include="Tax Calculator\ItemTypes\LocalItemTaxTests.cs" />
+    <Compile Include="Tax Calculator\ItemTypes\MedicineItemImportedTaxTests.cs" />
+    <Compile Include="Tax Calculator\ItemTypes\MedicineItemLocalTaxTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TaxCalculatorEngine\TaxCalculatorEngine.csproj">
